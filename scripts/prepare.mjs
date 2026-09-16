@@ -31,7 +31,7 @@ for (const [page, [title, description]] of Object.entries(pages)) {
   </head>
   <body>
     <div id="root"></div>
-    <noscript>Please enable JavaScript to explore Happy Valley Academy. Call <a href="tel:+27611173163">061 117 3163</a> or email <a href="mailto:info@happyvalleyacademy.co.za">info@happyvalleyacademy.co.za</a> for course enquiries.</noscript>
+    <noscript>Please enable JavaScript to explore Happy Valley Academy. Call <a href="tel:+27611173163">061 117 3163</a> or email <a href="mailto:happyvalleyacademy@outlook.com">happyvalleyacademy@outlook.com</a> for course enquiries.</noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>\n`);
