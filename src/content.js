@@ -1,5 +1,12 @@
 export const images = '/images/';
+export const contactEmail = 'happyvalleyacademy@outlook.com';
 export const googleLink = 'https://www.google.com/search?hl=en-GB&gl=ZA&kgmid=%2Fg%2F11zyn27p1j&q=Happy%20Valley%20Academy';
+export const socialLinks = {
+  facebook: '#',
+  instagram: '#',
+  tiktok: '#',
+  google: googleLink,
+};
 export const whatsappLink = (message = 'Hello Happy Valley Academy, I would like to enquire about your courses.') => 'https://wa.me/27611173163?text=' + encodeURIComponent(message);
 export const courses = [
   { id: 'elderly-care', name: 'Elderly Care', price: 2500, image: 'workplace-images-v2/work-02-mobility-support-v2.webp', training: 'academy-images/class-01-elderly-care.webp', label: 'COMPASSION IN EVERYDAY MOMENTS', description: 'Bring comfort, dignity and companionship to those who need it most.', detail: 'Caring for older people begins with understanding, patience and respect. Explore elderly care through a combination of theory and practical learning, and take your first step towards a meaningful future in care.', focus: ['Compassionate support for older people', 'Care that respects dignity and independence', 'Theory supported by practical experience'] },

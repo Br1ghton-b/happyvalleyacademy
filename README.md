@@ -1,4 +1,4 @@
-﻿# Happy Valley Academy
+# Happy Valley Academy
 
 A responsive four-page website built with React, Vite, HTML, CSS and JavaScript.
 
@@ -34,7 +34,7 @@ Static production files are generated in `dist/client`. A minimal adapter in
 
 The floating WhatsApp widget and contact form use 061 117 3163. The form prepares
 a message; the visitor reviews and sends it in WhatsApp. No enquiry is silently
-submitted or stored. All three supplied phone numbers and the flyer email address
+submitted or stored. All three supplied phone numbers and the Outlook email address
 are included. Venue, timetable and registration arrangements must be confirmed
 with the academy; no address, accreditation or employment guarantee is invented.
 
@@ -44,7 +44,7 @@ with the academy; no address, accreditation or employment guarantee is invented.
 `src/styles.css` and `src/pages.css` contain the responsive styles.
 Original supplied images remain in the parent folder. Optimised WebP copies are
 in `public/images`; run `node scripts/optimize-images.mjs` to regenerate them.
-The flyer `unnamed.webp` is linked for download on the Courses page.
+The redesigned PDF in `public/downloads` is linked on the Courses page. It uses genuine supplied academy photographs. Regenerate it with `node scripts/create-flyer.mjs`; rendering and text checks run automatically.
 
 The bespoke link-preview image is `public/og.png`, generated using the built-in
 Imagegen tool. Brief: an ivory, purple and forest-green editorial card, the exact
