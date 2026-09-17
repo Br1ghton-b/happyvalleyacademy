@@ -39,14 +39,15 @@ text('Theory + practicals',145,382,9,green,'bold',168);
 text('We arrange placements for practicals.',145,397,7,green,'sans',172);
 
 text('CHOOSE YOUR COURSE',36,445,8,green,'bold',523,{characterSpacing:1.6});
-const cards=[['01','Elderly\nCare','R2,500'],['02','First Aid\nLevel 101','R1,700'],['03','Baby Care /\nNanny','R1,000']];
-cards.forEach(([n,title,fee],i)=>{const x=36+i*179;doc.roundedRect(x,468,165,113,3).lineWidth(.6).fillAndStroke('#fffefa','#ded8dd');text(n,x+13,481,8,green,'bold',140);text(title,x+13,499,15,purple,'serif',140,{lineGap:1});text(fee,x+13,546,22,purple,'serif',140);});
-text('Registration fee: R500',36,595,10,purple,'bold',523);
+const cards=[['01','Elderly\nCare','R2,500','R3,000'],['02','First Aid\nLevel 101','R1,700','R2,200'],['03','Baby Care /\nNanny','R1,000','R1,500']];
+cards.forEach(([n,title,fee,total],i)=>{const x=36+i*179;doc.roundedRect(x,468,165,113,3).lineWidth(.6).fillAndStroke('#fffefa','#ded8dd');text(n,x+13,481,8,green,'bold',140);text(title,x+13,499,15,purple,'serif',140,{lineGap:1});text(fee,x+13,539,21,purple,'serif',140);text('Total incl. registration: '+total,x+13,568,7.5,muted,'sans',140);});
+text('Add R500 registration to each course or the package.',36,595,10,purple,'bold',523);
 
 doc.roundedRect(36,621,523,66,3).fill(green);
 text('THE COMPLETE CARE PACKAGE',51,634,7,'#dce5cc','bold',330,{characterSpacing:1});
 text('All three courses',51,652,21,'#ffffff','serif',330);
-text('R4,000',392,639,31,'#ffffff','serif',151,{align:'right'});
+text('R4,000',392,633,28,'#ffffff','serif',151,{align:'right'});
+text('R4,500 including registration',359,672,8,'#ffffff','sans',184,{align:'right'});
 
 doc.save().rect(36,708,82,91).clip().image('../IMG-20260916-WA0034.jpg',36,708,{cover:[82,102],align:'center',valign:'center'}).restore();
 text('LET’S GET YOU STARTED',135,710,8,green,'bold',424,{characterSpacing:1.4});
@@ -54,7 +55,7 @@ text('Call or WhatsApp  061 117 3163',135,730,12,purple,'bold',424,{link:'https:
 text('083 992 9153  |  081 673 6289',135,751,10,ink,'sans',424);
 text('happyvalleyacademy@outlook.com',135,772,10,purple,'sans',424,{link:'mailto:happyvalleyacademy@outlook.com'});
 rule(808);
-text('Confirm intake dates, course arrangements and the full payable amount before registering.',36,816,7,muted,'sans',523);
+text('Contact us to confirm intake dates, entry requirements and course arrangements.',36,816,7,muted,'sans',523);
 doc.end();
 await new Promise((resolve,reject)=>{stream.on('finish',resolve);stream.on('error',reject);});
 
@@ -66,5 +67,5 @@ const canvas=createCanvas(Math.ceil(viewport.width),Math.ceil(viewport.height));
 await page.render({canvasContext:canvas.getContext('2d'),viewport}).promise;
 await writeFile('outputs/flyer/preview.png',canvas.toBuffer('image/png'));
 const extracted=(await page.getTextContent()).items.map(i=>i.str).join(' ');
-for(const required of ['happyvalleyacademy@outlook.com','R2,500','R1,700','R1,000','R4,000','R500','061 117 3163','083 992 9153','081 673 6289'])if(!extracted.includes(required))throw new Error('Missing flyer content: '+required);
+for(const required of ['happyvalleyacademy@outlook.com','R2,500','R1,700','R1,000','R4,000','R500','R3,000','R2,200','R1,500','R4,500','061 117 3163','083 992 9153','081 673 6289'])if(!extracted.includes(required))throw new Error('Missing flyer content: '+required);
 console.log('Created and rendered one-page PDF. All course prices and contact details verified.');

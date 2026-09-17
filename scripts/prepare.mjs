@@ -2,7 +2,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 const pages = {
   index: ['Happy Valley Academy | Learn Today. Care Tomorrow.', 'Discover elderly care, first aid and baby care training at Happy Valley Academy. Three-month courses with practical placements.'],
   about: ['Our Academy | Happy Valley Academy', 'Meet Happy Valley Academy. Care training that brings together compassion, theory and practical learning.'],
-  courses: ['Courses & Fees | Happy Valley Academy', 'Explore Elderly Care at R2,500, First Aid Level 101 at R1,700, and Baby Care / Nanny at R1,000. All three courses for R4,000.'],
+  courses: ['Courses & Fees | Happy Valley Academy', 'Explore Elderly Care at R2,500, First Aid Level 101 at R1,700, and Baby Care / Nanny at R1,000. All three courses for R4,000. Add R500 registration to each course or the package.'],
   contact: ['Contact & Enquiries | Happy Valley Academy', 'Contact Happy Valley Academy about courses, practical placements and registration. Call 061 117 3163 or prepare your WhatsApp enquiry.'],
 };
 const origin = process.env.SITE_ORIGIN?.replace(/\/$/, '');

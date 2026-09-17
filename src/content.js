@@ -17,7 +17,7 @@ export const money = value => 'R' + value.toLocaleString('en-ZA');
 export const faqs = [
   ['How long are the courses?', 'The academy advertises a three-month duration for all courses, including theory and practicals. Please contact our team for the timetable and the next intake dates.'],
   ['Is practical training included?', 'Yes. The academy arranges placements for practicals, so learning extends beyond the classroom. Contact us to discuss how practical placement works for your chosen course.'],
-  ['How much does registration cost?', 'The advertised registration fee is R500. Course fees are R2,500 for Elderly Care, R1,700 for First Aid Level 101 and R1,000 for Baby Care / Nanny. All three courses are advertised at R4,000. Please confirm whether registration is additional to your selected package before paying.'],
+  ['How much does registration cost?', 'A R500 registration fee is additional to each individual course or the all-three-course package. Including registration, the total is R3,000 for Elderly Care, R2,200 for First Aid Level 101, R1,500 for Baby Care / Nanny, or R4,500 for all three courses together.'],
   ['How do I enrol?', 'Send us a WhatsApp message or call one of our contact numbers. Our team can confirm entry requirements, dates, payment details and the documents needed to register.'],
-  ['Can I take all three courses?', 'Yes. The flyer offers all three courses for R4,000. Ask our team about the combined course schedule and registration arrangements.'],
+  ['Can I take all three courses?', 'Yes. The all-three-course package costs R4,000 plus a R500 registration fee, for a total of R4,500. Ask our team about the combined course schedule.'],
 ];
