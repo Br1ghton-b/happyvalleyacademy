@@ -19,7 +19,7 @@ for (const path of routes) {
       assert.ok(existsSync(ref.endsWith('.html')?ref.slice(1):'public'+ref),'Missing local asset or page: '+ref);
     }
     if(path==='/courses.html')for(const id of ['elderly-care','first-aid','baby-care','package'])assert.ok(html.includes(`id="${id}"`));
-    if(path==='/contact.html'){assert.ok(html.includes('selected="">Elderly Care'));assert.ok(html.includes('Prepare WhatsApp enquiry'));}
+    if(path==='/contact.html'){assert.ok(html.includes('selected="">Elderly Care'));assert.ok(html.includes('WhatsApp Inquiry'));assert.ok(html.includes('Email Inquiry'));}
     console.log('PASS '+path+' — renders, navigation, images, links and page controls verified.');
   } finally {await server.close();}
 }
